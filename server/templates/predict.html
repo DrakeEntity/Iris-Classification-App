@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container text-center">    
+    <p>The Predicted flower class is {{result}}</p>
+</div>
+<div class="container-fluid m-2 p-3">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="slength" >Sepal length (4.3 ~ 7.9)</label>
+            <input class="form-control" type="number" step="0.01" name="slength" placeholder="sepal length in centimeters">
+        </div>
+        <div class="form-group">
+            <label for="swidth" >Sepal width (2 ~ 4.4)</label>
+            <input class="form-control" type="number" step="0.01" name="swidth" placeholder="sepal width in centimeters">
+        </div>
+        
+        <div class="form-group">
+            <label for="plength" >Petal length (1 ~ 6.9)</label>
+            <input class="form-control" type="number" step="0.01" name="plength" placeholder="petal length in centimeters">
+        </div>
+        <div class="form-group">
+            <label for="pwidth" >Petal Width (0.1 ~ 2.5) </label>
+            <input class="form-control" type="number" step="0.01" name="pwidth" placeholder="petal width in centimeters">
+        </div> 
+        <div class="container text-center mb-4">
+            <button class="shadow-lg btn btn-primary btn-lg text-white font-weight-bold my-2" style="width:280px" type="submit">Predict</button>  
+        </div>
+    </form>
+</div>
+
+
+{% endblock body %}
