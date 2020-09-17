@@ -1,31 +1,35 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <div class="container text-center">
-        <h1> Predict The Flower </h1>
+        <header>
+    <div id="container">
+        <h1 id="maintitle" >Predict The Iris Flower</h1>
     </div>
+    
+  
+    </header>
     <div class="container-fluid m-2 p-3">
         <form method="post">
         {% csrf_token %}
         <div class="form-group">
-            <label for="slength" >Sepal length (4.3 ~ 7.9)</label>
+            <label for="slength" id="names">Sepal length (4.3 ~ 7.9)</label>
             <input class="form-control" type="number" step="0.01" name="slength" placeholder="sepal length in centimeters">
         </div>
         <div class="form-group">
-            <label for="swidth" >Sepal width (2 ~ 4.4)</label>
+            <label for="swidth" id="names">Sepal width (2 ~ 4.4)</label>
             <input class="form-control" type="number" step="0.01" name="swidth" placeholder="sepal width in centimeters">
         </div>
         
         <div class="form-group">
-            <label for="plength" >Petal length (1 ~ 6.9)</label>
+            <label for="plength" id="names">Petal length (1 ~ 6.9)</label>
             <input class="form-control" type="number" step="0.01" name="plength" placeholder="petal length in centimeters">
         </div>
         <div class="form-group">
-            <label for="pwidth" >Petal Width (0.1 ~ 2.5) </label>
+            <label for="pwidth" id="names">Petal Width (0.1 ~ 2.5) </label>
             <input class="form-control" type="number" step="0.01" name="pwidth" placeholder="petal width in centimeters">
         </div> 
-        <div class="container text-center mb-4">
-            <button class="shadow-lg btn btn-primary btn-lg text-white font-weight-bold my-2" style="width:280px" type="submit">Predict</button>  
+        <div class="container text-center">
+            <button class="shadow-lg btn btn-primary btn-lg text-white font-weight-bold my-2" style="width:280px" type="submit" style="font-size: 1.4em">Predict</button>  
         </div>
     </form>
     </div>
